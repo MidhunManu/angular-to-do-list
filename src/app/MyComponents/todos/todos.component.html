@@ -1,0 +1,5 @@
+<app-add-todo class="container-fluid" (todoAdd) = "addTodo($event)"></app-add-todo>
+<div *ngIf="this.todos.length === 0"><p style="text-align: center;">No Todos to display</p></div>
+<ul *ngFor = "let todo of todos">
+  <app-todo-item [todo]="todo" (toDoDelete) = "deleteTodo($event)"></app-todo-item>
+</ul>
